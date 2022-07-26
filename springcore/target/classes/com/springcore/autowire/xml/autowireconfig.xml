@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class="com.springcore.autowire.xml.Address" 
+		name="address" 
+		p:street="Kunal Icon Road" 
+		p:city="Pune" 
+		p:state="Maharastra" 
+	/>
+	<bean class="com.springcore.autowire.xml.HealthDetails"
+		name="healthDetails"
+		p:bloodGroup="O +ve"
+	/>
+	
+	
+	<!-- using byName -->
+	<!-- <bean class="com.springcore.autowire.xml.Employee" 
+		 name="emp" 
+		 p:name="Jyotiraditya" 
+		 p:age="33" 
+		 autowire="byName" 
+	/> -->
+	
+	<!-- using byType -->
+	<!-- <bean class="com.springcore.autowire.xml.Employee" 
+		 name="emp" 
+		 p:name="Jyotiraditya" 
+		 p:age="33" 
+		 autowire="byType" 
+	/> -->
+	
+	<!-- using constructor -->
+	<bean class="com.springcore.autowire.xml.Employee" 
+		 name="emp" 
+		 p:name="Jyotiraditya" 
+		 p:age="33" 
+		 autowire="constructor" 
+	/> 
+	
+	
+</beans>

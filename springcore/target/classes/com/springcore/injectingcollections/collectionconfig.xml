@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- This is the demonstration of collection injecting-->
+	<bean class="com.springcore.injectingcollections.Employee" name="employee">
+		<property name="employeeName" value="Jyotiraditya" />
+		<property name="mobileNumbers">
+			<list>
+				<value>9663659623</value>
+				<value>979317917</value>
+				<value>08908131</value>
+			</list>
+		</property>
+		<property name="emaildIds">
+			<set>
+				<value>jyotiraditya12@gmail.com</value>
+				<value>abc@gmail.com</value>
+				<value>jdm@gmail.com</value>
+			</set>
+		</property>
+		<property name="projects">
+			<map>
+				<entry key="Kano" value="AI/ML"/>
+				<entry key="Chatime" value="Full Stack"/>
+			</map>
+		</property>
+	</bean>
+	
+
+</beans>

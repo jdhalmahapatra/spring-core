@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- This is our Beans -->
+	<bean class="com.springcore.referenceinject.Department" name="dept">
+		<property name="deptId" value="1" />
+		<property name="deptName" value="Full-Stack Development" />
+	</bean>
+	
+	<!-- <bean class="com.springcore.referenceinject.User" name="user">
+	  <property name="id" value="322" />
+	  <property name="name" value="Jyotiraditya" />
+	  
+	  <property name="department">
+	  	<ref bean="dept" />
+	  </property>
+	  
+	  <property name="department" ref="dept" />
+	  
+	</bean> -->
+	
+	
+	<bean class="com.springcore.referenceinject.User" name="user" p:id="322" p:name="Jyotiraditya" p:department-ref="dept"/>
+
+</beans>
