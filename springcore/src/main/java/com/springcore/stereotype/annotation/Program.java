@@ -12,6 +12,7 @@ public class Program {
 		
 		Student std = context.getBean("student", Student.class);
 		System.out.println(std);
+		System.out.println(std.getCityAdresses());
 		((ClassPathXmlApplicationContext)context).close();
 	}
 
