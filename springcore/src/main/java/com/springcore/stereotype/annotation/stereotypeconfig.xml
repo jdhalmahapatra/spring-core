@@ -19,4 +19,10 @@
 	</util:list>
 	<context:component-scan base-package="com.springcore.stereotype.annotation"></context:component-scan>
 	
+	<!-- Bean Scope using XML -->
+	<bean class="com.springcore.stereotype.annotation.Teacher" name="teacher" scope="prototype">
+		<property name="teacherName" value="Ramesh" />
+	</bean>
+	
+	
 </beans>
